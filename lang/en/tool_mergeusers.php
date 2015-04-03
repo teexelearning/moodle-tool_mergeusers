@@ -90,6 +90,8 @@ $string['excluded_exceptions_desc'] = 'Experience on this subject suggests
     merging process (not recommended).';
 
 //New strings
+$string['eventmerge_completed'] = 'user merged successfully';
+$string['eventmerge_failed'] = 'user merge failed';
 
 // Progress bar
 $string['choose_users'] = 'Choose users to merge';
