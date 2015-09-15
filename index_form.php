@@ -47,8 +47,8 @@ class mergeuserform extends moodleform {
         $strrequired = get_string('required');
 
         $idstype = array(
-            'username' => get_string('username'),
             'idnumber' => get_string('idnumber'),
+            'username' => get_string('username'),
             'id'       => 'Id',
         );
 
@@ -74,21 +74,21 @@ class mergeuserform extends moodleform {
 
         $mform->addElement('static', 'mergeusersadvanced', get_string('mergeusersadvanced', 'tool_mergeusers'));
         $mform->addHelpButton('mergeusersadvanced', 'mergeusersadvanced', 'tool_mergeusers');
-        $mform->setAdvanced('mergeusersadvanced');
+//        $mform->setAdvanced('mergeusersadvanced');
 
         $olduser = array();
         $olduser[] = $mform->createElement('text', 'olduserid', "", 'size="10"');
         $olduser[] = $mform->createElement('select', 'olduseridtype', '', $idstype, '');
         $mform->addGroup($olduser, 'oldusergroup', get_string('olduserid', 'tool_mergeusers'));
         $mform->setType('oldusergroup[olduserid]', PARAM_RAW_TRIMMED);
-        $mform->setAdvanced('oldusergroup');
+//        $mform->setAdvanced('oldusergroup');
 
         $newuser = array();
         $newuser[] = $mform->createElement('text', 'newuserid', "", 'size="10"');
         $newuser[] = $mform->createElement('select', 'newuseridtype', '', $idstype, '');
         $mform->addGroup($newuser, 'newusergroup', get_string('newuserid', 'tool_mergeusers'));
         $mform->setType('newusergroup[newuserid]', PARAM_RAW_TRIMMED);
-        $mform->setAdvanced('newusergroup');
+//        $mform->setAdvanced('newusergroup');
 
         $this->add_action_buttons(false, get_string('search'));
     }
